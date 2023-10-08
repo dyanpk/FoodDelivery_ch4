@@ -7,7 +7,7 @@
     android:padding="8dp">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_menu_image"
+        android:id="@+id/iv_item_menu"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="centerCrop"
@@ -36,7 +36,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/ll_counter_menu"
-        app:layout_constraintStart_toEndOf="@id/iv_menu_image"
+        app:layout_constraintStart_toEndOf="@id/iv_item_menu"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Ayam lepas" />
 
@@ -49,7 +49,7 @@
         android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/et_notes_item"
         app:layout_constraintEnd_toStartOf="@+id/ll_counter_menu"
-        app:layout_constraintStart_toEndOf="@+id/iv_menu_image"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_menu"
         app:layout_constraintTop_toBottomOf="@id/tv_menu_name"
         tools:text="IDR. 20.000" />
 
@@ -105,7 +105,7 @@
         android:padding="8dp"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/iv_menu_image"
-        app:layout_constraintTop_toBottomOf="@id/iv_menu_image"
+        app:layout_constraintStart_toEndOf="@id/iv_item_menu"
+        app:layout_constraintTop_toBottomOf="@id/iv_item_menu"
         tools:text="notes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

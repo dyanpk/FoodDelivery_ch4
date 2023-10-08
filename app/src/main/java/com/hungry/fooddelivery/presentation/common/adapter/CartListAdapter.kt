@@ -73,7 +73,7 @@ class CartViewHolder(
 
     private fun setCartData(item: CartMenu) {
         with(binding) {
-            binding.ivMenuImage.load(item.menu.imgUrlMenu) {
+            binding.ivItemMenu.load(item.menu.imgUrlMenu) {
                 crossfade(true)
             }
             tvMenuCount.text = item.cart.itemQuantity.toString()
@@ -112,7 +112,7 @@ class CartOrderViewHolder(
 
     private fun setCartData(item: CartMenu) {
         with(binding) {
-            binding.ivMenuImage.load(item.menu.imgUrlMenu) {
+            binding.ivItemMenu.load(item.menu.imgUrlMenu) {
                 crossfade(true)
             }
             tvTotalQuantity.text =
