@@ -7,7 +7,7 @@
     tools:context=".presentation.feature.detail.DetailActivity">
 
     <ImageView
-        android:id="@+id/iv_food"
+        android:id="@+id/iv_item_menu"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -28,33 +28,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ll_detail_food"
+        android:id="@+id/ll_detail_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_food">
+        app:layout_constraintTop_toBottomOf="@id/iv_item_menu">
 
         <LinearLayout
-            android:id="@+id/ll_detail_food_name"
+            android:id="@+id/ll_detail_menu_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/ll_detail_food">
+            app:layout_constraintTop_toTopOf="@id/ll_detail_menu">
 
             <TextView
-                android:id="@+id/tv_name_of_food"
+                android:id="@+id/tv_name_of_menu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Ayam Bakar" />
 
             <TextView
-                android:id="@+id/tv_price_of_food"
+                android:id="@+id/tv_price_of_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rp 20.000" />
@@ -70,18 +70,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_detail_food_name" />
+            app:layout_constraintTop_toBottomOf="@id/ll_detail_menu_name" />
+
+        <View
+            android:id="@+id/view_linear"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/img_rectangle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_detail_food" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -91,7 +91,7 @@
         android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_rectangle">
+        app:layout_constraintTop_toBottomOf="@id/ll_detail_menu">
 
         <LinearLayout
             android:id="@+id/ll_shop_location"
@@ -142,14 +142,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            app:layout_constraintBottom_toTopOf="@id/ll_quantity"
-            app:layout_constraintEnd_toEndOf="parent"
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@color/grey"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/ll_quantity"/>
 
         <LinearLayout
             android:id="@+id/ll_quantity"

@@ -13,7 +13,7 @@ class LinearMenuItemViewHolder(
 ) : RecyclerView.ViewHolder(binding.root), ViewHolderBinder<Menu> {
 
     override fun bind(item: Menu) {
-        binding.ivMenu.load(item.imgUrlMenu)
+        binding.ivItemMenu.load(item.imgUrlMenu)
         binding.tvNameOfMenu.text = item.nameOfMenu
 
         val formattedPrice = item.priceOfMenu.toCurrencyFormat()

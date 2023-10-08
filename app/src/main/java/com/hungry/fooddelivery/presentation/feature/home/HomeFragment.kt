@@ -1,5 +1,6 @@
 package com.hungry.fooddelivery.presentation.feature.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import com.hungry.fooddelivery.data.repository.MenuRepositoryImpl
 import com.hungry.fooddelivery.databinding.FragmentHomeBinding
 import com.hungry.fooddelivery.databinding.ItemSectionMenuBinding
 import com.hungry.fooddelivery.model.Menu
+import com.hungry.fooddelivery.presentation.feature.detail.DetailActivity
 import com.hungry.fooddelivery.presentation.feature.home.adapter.HomeAdapter
 import com.hungry.fooddelivery.utils.GenericViewModelFactory
 
@@ -31,8 +33,8 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun navigateToDetail(item: Menu){
-
+    private fun navigateToDetail(item: Menu) {
+        DetailActivity.startActivity(requireContext(),item)
     }
 
     private val viewModel: HomeViewModel by viewModels {
