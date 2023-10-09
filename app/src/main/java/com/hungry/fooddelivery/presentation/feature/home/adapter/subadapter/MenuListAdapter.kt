@@ -5,20 +5,22 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.hungry.fooddelivery.core.ViewHolderBinder
 import com.hungry.fooddelivery.databinding.ItemGridMenuBinding
 import com.hungry.fooddelivery.databinding.ItemLinearMenuBinding
 import com.hungry.fooddelivery.model.Menu
 import com.hungry.fooddelivery.presentation.feature.home.adapter.viewholder.GridMenuItemViewHolder
 import com.hungry.fooddelivery.presentation.feature.home.adapter.viewholder.LinearMenuItemViewHolder
-import com.hungry.fooddelivery.utils.toCurrencyFormat
 
 class MenuListAdapter(
     private val itemClick: (Menu) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var layoutMode: AdapterLayoutMode = AdapterLayoutMode.GRID
+
+    lateinit var adapterLayoutMode: AdapterLayoutMode
+
+    private var layoutMode: AdapterLayoutMode = AdapterLayoutMode.LINEAR
+    
 
     private val dataDiffer =
         AsyncListDiffer(this, object : DiffUtil.ItemCallback<Menu>() {
@@ -46,16 +48,16 @@ class MenuListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (layoutMode) {
-            AdapterLayoutMode.GRID -> {
-                GridMenuItemViewHolder(
-                    binding = ItemGridMenuBinding.inflate(
+            AdapterLayoutMode.LINEAR-> {
+                LinearMenuItemViewHolder(
+                    binding = ItemLinearMenuBinding.inflate(
                         LayoutInflater.from(parent.context), parent, false
                     ), itemClick
                 )
             }
             else -> {
-                LinearMenuItemViewHolder(
-                        binding = ItemLinearMenuBinding.inflate(
+                GridMenuItemViewHolder(
+                        binding = ItemGridMenuBinding.inflate(
                         LayoutInflater.from(parent.context), parent, false
                     ), itemClick
                 )
@@ -68,7 +70,6 @@ class MenuListAdapter(
     }
 
     override fun getItemCount(): Int = dataDiffer.currentList.size
-
 
 
 }
