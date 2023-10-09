@@ -21,14 +21,14 @@
             android:id="@+id/tv_header_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hai, Binarian" />
+            android:text="@string/user_greetings" />
 
         <TextView
             android:id="@+id/tv_header_greetings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.5"
-            android:text="Mau makan Apa Hari Ini?" />
+            android:text="@string/greetings" />
     </LinearLayout>
 
     <LinearLayout

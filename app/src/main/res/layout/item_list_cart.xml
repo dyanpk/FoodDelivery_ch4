@@ -31,13 +31,13 @@
             android:id="@+id/tv_menu_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dimsum" />
+            tools:text="@string/title_profile" />
 
         <TextView
             android:id="@+id/tv_price_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rp 20.000" />
+            android:text="@string/price_cart_list" />
 
     </LinearLayout>
 
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:gravity="center"
-            android:text="1" />
+            android:text="@string/quantity_cart" />
 
         <ImageView
             android:id="@+id/ic_plus"
@@ -97,7 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Catatan: "
+        android:hint="@string/notes_cart"
         android:background="@color/grey"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="50dp"

@@ -10,6 +10,7 @@ import com.hungry.fooddelivery.presentation.feature.home.adapter.subadapter.Cate
 class CategoriesSectionViewHolder(
     private val binding: ItemSectionCategoryBinding
 ) : RecyclerView.ViewHolder(binding.root), ViewHolderBinder<HomeSection>{
+
     private val adapter: CategoryListAdapter by lazy {
         CategoryListAdapter{
             Toast.makeText(binding.root.context, it.nameOfCategory, Toast.LENGTH_SHORT).show()

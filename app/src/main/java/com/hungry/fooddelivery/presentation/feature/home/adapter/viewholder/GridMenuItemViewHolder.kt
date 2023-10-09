@@ -15,10 +15,7 @@ class GridMenuItemViewHolder(
     override fun bind(item: Menu) {
         binding.ivItemMenu.load(item.imgUrlMenu)
         binding.tvNameOfMenu.text = item.nameOfMenu
-
-        val formattedPrice = item.priceOfMenu.toCurrencyFormat()
-        binding.tvPriceOfMenu.text = formattedPrice
-
+        binding.tvPriceOfMenu.text = item.priceOfMenu.toCurrencyFormat()
         binding.root.setOnClickListener {
             onClickListener.invoke(item)
         }

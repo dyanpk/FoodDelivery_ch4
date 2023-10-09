@@ -25,6 +25,9 @@ class HomeAdapter(
     private val onMenuClicked: (Menu) -> Unit
 ) : RecyclerView.Adapter<ViewHolder>() {
 
+    private var layoutMode: AdapterLayoutMode = AdapterLayoutMode.LINEAR
+    private val items: MutableList<Menu> = mutableListOf()
+
     private val dataDiffer =
         AsyncListDiffer(this, object : DiffUtil.ItemCallback<HomeSection>() {
             override fun areItemsTheSame(
@@ -113,6 +116,11 @@ class HomeAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         (holder as ViewHolderBinder<HomeSection>).bind(dataDiffer.currentList[position])
+    }
+
+    fun setLayoutMode(newLayoutMode: AdapterLayoutMode) {
+        layoutMode = newLayoutMode
+        notifyDataSetChanged()
     }
 
     companion object {

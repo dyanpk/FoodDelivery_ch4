@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="List of Menu" />
+            android:text="@string/list_of_menu" />
 
         <ImageView
             android:id="@+id/iv_button"
@@ -41,13 +41,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:nestedScrollingEnabled="true"
-        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        tools:spanCount="2"
-        tools:listitem="@layout/item_grid_menu"
+        tools:spanCount="1"
+        tools:listitem="@layout/item_linear_menu"
         />
 
     <include
